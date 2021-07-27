@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>User Name</label>
+      <!--  <input
+        type="text"
+        class="form-control"
+        (input)="onUpdateUserName($event)"/>-->
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="userName"
+        (input)="onUpdateUserName($event)"/>
+        <p>{{ userName }}</p>
+      <button
+        class="btn btn-primary"
+        [disabled]="!allowNewUser"
+        (click)="onCreateUser()">Add User</button>
+      <hr>
+
+      <!--  property binding: <p [innerText]="allowNewUser"></p>
+      selected username: <p>{{ userName}}</p>-->
+      <p>{{ userCreationStatus }}</p>
+      <hr>
+          </div>
+  </div>
+</div>
+

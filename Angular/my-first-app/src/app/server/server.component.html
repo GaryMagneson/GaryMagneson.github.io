@@ -1,1 +1,23 @@
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<div class="row">
+<div class="col-xs-4">
+  <p
+  [ngStyle]="{'background-color': getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+  </p>
+<br/>
+<button
+  class="btn btn-warning"
+  (click)="onDisplayDetails()">Display Details</button>
+  <p *ngIf="showInfo">Secret password = tuna</p>
+  <br />
+  <p *ngFor="let detail of detailInfo"
+  [ngStyle]="{'background-color': getDetailColor(detail)}"
+  [ngClass]="{moreThanFive: detail>=5 }"
+  >
+    {{ getIndexOf(detail) }}
+  </p>
+  <br />
+  <hr />
+</div>
+</div>
