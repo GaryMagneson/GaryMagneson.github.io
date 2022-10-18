@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'This is a Test',
-                    'https://d1e3z2jco40k3v.cloudfront.net/-/media/mccormick-us/recipes/mccormick/q/2000/quick_and_easy_french_toast_new_2000x1125.jpg'),
+                    'https://insanelygoodrecipes.com/wp-content/uploads/2021/08/French-Toast-with-Berries-and-Butter-683x1024.webp'),
     new Recipe('A Test Recipe', 'This is a Test too',
-    'https://d1e3z2jco40k3v.cloudfront.net/-/media/mccormick-us/recipes/mccormick/q/2000/quick_and_easy_french_toast_new_2000x1125.jpg')
+    'https://insanelygoodrecipes.com/wp-content/uploads/2021/08/French-Toast-with-Berries-and-Butter-683x1024.webp')
 
   ];
   constructor() { }
